@@ -51,8 +51,6 @@ class Stopwatch:
 
     def stop(self):
         """Stops measuring elapsed time for an interval."""
-        if not self.is_running:
-            return
         self._elapsed = self.elapsed
         self._running = False
 
@@ -68,4 +66,6 @@ class Stopwatch:
         return '{} milliseconds have elapsed so far'.format(self.elapsed_milliseconds)
 
     def __repr__(self):
-        return str(self)
+        elapsed_interval = self.elapsed
+        return 'Stopwatch has been running for {} days, {} seconds and {} microseconds'.format(
+               elapsed_interval.days, elapsed_interval.seconds, elapsed_interval.microseconds)
