@@ -8,8 +8,8 @@ class Stopwatch:
         """Initializes a new instance of the Stopwatch class.
 
         The returned Stopwatch instance is stopped, and the elapsed time property of the instance is zero.
-        Use the Start method to begin measuring elapsed time with the new Stopwatch instance.
-        Use the StartNew method to initialize a new Stopwatch instance and immediately start it."""
+        Use the start method to begin measuring elapsed time with the new Stopwatch instance.
+        Use the start_new method to initialize a new Stopwatch instance and immediately start it."""
         self._start = None  # type: datetime
         self._elapsed = timedelta(0)
         self._running = False
